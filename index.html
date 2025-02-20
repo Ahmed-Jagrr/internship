@@ -178,7 +178,7 @@
     <!-- End Header Section -->
 
     <!-- Slider Section: Background covers full section; buttons removed -->
-    <section class="slider_section" style="background: url('images/hero-bg.jpg') no-repeat center center; background-size: cover; min-height: 85vh;">
+    <section class="slider_section" style="background: url('images/hero-bg.jpg') no-repeat center center; background-size: cover; min-height: 75vh;">
       <div id="customCarousel1" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -233,8 +233,8 @@
   <section class="about_section layout_padding">
     <div class="container">
       <div class="row">
-        <!-- Text Column -->
-        <div class="col-md-6">
+        <!-- Text Column (Full Width) -->
+        <div class="col-md-12">
           <div class="detail-box">
             <div class="heading_container">
               <h2>Welcome to <span style="color: #FF0000;">DEARS</span></h2>
@@ -246,12 +246,6 @@
             <div class="btn-box text-center mt-4">
               <a href="about.html" class="see-more-btn">Read More</a>
             </div>
-          </div>
-        </div>
-        <!-- Image Column -->
-        <div class="col-md-6">
-          <div class="img-box">
-            <img src="images/about-img.png" alt="About DEARS" />
           </div>
         </div>
       </div>
@@ -451,79 +445,126 @@
   </section>
   <!-- End Contact Section -->
 
-  <!-- Client Section -->
-  <section class="client_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>Testimonial</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-9 mx-auto">
-          <div id="customCarousel2" class="carousel slide" data-ride="carousel">
-            <div class="row">
-              <div class="col-md-11">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="box">
-                      <div class="client_id">
-                        <div class="img-box">
-                          <img src="images/client.jpg" alt="Client Photo" />
-                        </div>
-                        <h5>Alex Jonson</h5>
+ <!-- Client Section -->
+ <section class="client_section layout_padding">
+  <style>
+    /* Remove hover effects and force black text in client section */
+    .client_section .box {
+      background-color: transparent !important;
+      border: none !important;
+      color: #000 !important;
+      transition: none !important;
+    }
+    .client_section .detail-box p,
+    .client_section .detail-box h5 {
+      color: #000 !important;
+      display: block !important;
+    }
+    .client_section .box:hover {
+      background-color: transparent !important;
+      border: none !important;
+      color: #000 !important;
+    }
+    .client_section .box:hover h5,
+    .client_section .box:hover p {
+      color: #000 !important;
+    }
+    .client_section .box:hover img {
+      filter: none !important;
+    }
+
+    /* Carousel indicators in red with hover effect */
+    .carousel-indicators li {
+      background-color: #FF0000 !important;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
+    .carousel-indicators li:hover,
+    .carousel-indicators li:focus {
+      background-color: #CC0000 !important;
+    }
+    .carousel-indicators li.active {
+      background-color: #FF0000 !important;
+    }
+  </style>
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>Testimonial</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-9 mx-auto">
+        <div id="customCarousel2" class="carousel slide" data-ride="carousel">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="carousel-inner">
+                <!-- Slide 1: GAMAI -->
+                <div class="carousel-item active">
+                  <div class="box">
+                    <div class="client_id">
+                      <div class="img-box">
+                        <img src="images/gamai.jpg" alt="GAMAI" />
                       </div>
-                      <div class="detail-box">
-                        <p>
-                          Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                      </div>
+                      <h5>GAMAI</h5>
+                    </div>
+                    <div class="detail-box">
+                      <p>
+                        DEARS holds the status of being our preferred partner for handling complex processes, communications protocols, and specialized PLC programming tailored for special machinery.
+                      </p>
                     </div>
                   </div>
-                  <div class="carousel-item">
-                    <div class="box">
-                      <div class="client_id">
-                        <div class="img-box">
-                          <img src="images/client.jpg" alt="Client Photo" />
-                        </div>
-                        <h5>Alex Jonson</h5>
+                </div>
+                <!-- Slide 2: Tubeetprofil -->
+                <div class="carousel-item">
+                  <div class="box">
+                    <div class="client_id">
+                      <div class="img-box">
+                        <img src="images/Tubeetprofil.jpg" alt="Tubeetprofil" />
                       </div>
-                      <div class="detail-box">
-                        <p>
-                          Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                      </div>
+                      <h5>Tubeetprofil</h5>
+                    </div>
+                    <div class="detail-box">
+                      <p>
+                        Thanks to DEARS, we were able to overcome challenges with our production line, resolving the issue in just three days. After three months of breakdowns leading to production losses, DEARS came to our rescue and swiftly rectified the problem.
+                      </p>
                     </div>
                   </div>
-                  <div class="carousel-item">
-                    <div class="box">
-                      <div class="client_id">
-                        <div class="img-box">
-                          <img src="images/client.jpg" alt="Client Photo" />
-                        </div>
-                        <h5>Alex Jonson</h5>
+                </div>
+                <!-- Slide 3: Excelo -->
+                <div class="carousel-item">
+                  <div class="box">
+                    <div class="client_id">
+                      <div class="img-box">
+                        <img src="images/Excelo.jpg" alt="Excelo" />
                       </div>
-                      <div class="detail-box">
-                        <p>
-                          Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </p>
-                      </div>
+                      <h5>Excelo</h5>
+                    </div>
+                    <div class="detail-box">
+                      <p>
+                        We rely on you and appreciate the prompt response and excellent service.
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-1">
-                <ol class="carousel-indicators">
-                  <li data-target="#customCarousel2" data-slide-to="0" class="active"></li>
-                  <li data-target="#customCarousel2" data-slide-to="1"></li>
-                  <li data-target="#customCarousel2" data-slide-to="2"></li>
-                </ol>
-              </div>
+            </div>
+            <!-- Carousel Indicators -->
+            <div class="col-md-1">
+              <ol class="carousel-indicators">
+                <li data-target="#customCarousel2" data-slide-to="0" class="active"></li>
+                <li data-target="#customCarousel2" data-slide-to="1"></li>
+                <li data-target="#customCarousel2" data-slide-to="2"></li>
+              </ol>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- End Client Section -->
+  </div>
+</section>
+<!-- End Client Section -->
+
 
   <!-- Info Section -->
   <section class="info_section">
